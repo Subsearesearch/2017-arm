@@ -1,0 +1,76 @@
+/*
+ * UART.c
+ *
+ *  Created on: Feb 28, 2017
+ *      Author: Joey
+ */
+
+#include "board.h"
+#include "Arduino_Header.h"
+#include <string.h>
+
+/*****************************************************************************
+ * Private types/enumerations/variables
+ ****************************************************************************/
+
+/* Transmit and receive ring buffers */
+//STATIC RINGBUFF_T txring, rxring;
+
+/* Ring buffer size */
+#define UART_RB_SIZE 64
+
+/* Set the default UART, IRQ number, and IRQ handler name */
+#define LPC_USART       LPC_USART0
+#define LPC_IRQNUM      UART0_IRQn
+#define LPC_UARTHNDLR   UART0_IRQHandler
+
+/* Default baudrate for testing */
+#define UART_TEST_DEFAULT_BAUDRATE 115200
+
+/*****************************************************************************
+ * Public types/enumerations/variables
+ ****************************************************************************/
+
+/*****************************************************************************
+ * Private functions
+ ****************************************************************************/
+
+/* UART Pin mux function - note that SystemInit() may already setup your
+   pin muxing at system startup */
+static void Init_UART_PinMux(void)
+{
+	/* Enable the clock to the Switch Matrix */
+	Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_SWM);
+
+#if (defined(BOARD_NXP_LPCXPRESSO_812) || defined(BOARD_LPC812MAX))
+
+	Chip_Clock_SetUARTClockDiv(1);	/* divided by 1 */
+
+	/* Connect the U0_TXD_O and U0_RXD_I signals to port pins(P0.4, P0.0) */
+	Chip_SWM_DisableFixedPin(SWM_FIXED_ACMP_I1);
+	Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, 4);
+	Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, 0);
+
+#elif defined(BOARD_NXP_LPCXPRESSO_824)
+	/* We don't need DEBUG_UART so disable it */
+	Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, arduino1);
+	Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, arduino0);
+#else
+	/* Configure your own UART pin muxing here if needed */
+#warning "No UART pin muxing defined"
+#endif
+	/* Disable the clock to the Switch Matrix to save power */
+	Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
+}
+
+/*****************************************************************************
+ * Public functions
+ ****************************************************************************/
+
+static void sendUART(const char *sendStr) {
+
+	while (*sendStr != '\0') {
+		Chip_UART_SendBlocking(LPC_USART0, sendStr, 1);
+		sendStr++;
+	}
+}

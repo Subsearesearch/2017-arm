@@ -1,0 +1,41 @@
+22:59:26 **** Build of configuration Debug for project periph_glitch_filter ****
+make -r all 
+Building file: ../example/src/cr_startup_lpc82x.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc82x.d" -MT"example/src/cr_startup_lpc82x.o" -MT"example/src/cr_startup_lpc82x.d" -o "example/src/cr_startup_lpc82x.o" "../example/src/cr_startup_lpc82x.c"
+Finished building: ../example/src/cr_startup_lpc82x.c
+ 
+Building file: ../example/src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/crp.d" -MT"example/src/crp.o" -MT"example/src/crp.d" -o "example/src/crp.o" "../example/src/crp.c"
+Finished building: ../example/src/crp.c
+ 
+Building file: ../example/src/glitch_filter.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/glitch_filter.d" -MT"example/src/glitch_filter.o" -MT"example/src/glitch_filter.d" -o "example/src/glitch_filter.o" "../example/src/glitch_filter.c"
+Finished building: ../example/src/glitch_filter.c
+ 
+Building file: ../example/src/mtb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/mtb.d" -MT"example/src/mtb.o" -MT"example/src/mtb.d" -o "example/src/mtb.o" "../example/src/mtb.c"
+Finished building: ../example/src/mtb.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+Finished building: ../example/src/sysinit.c
+ 
+Building target: periph_glitch_filter.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\Debug" -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\Debug" -Xlinker -Map="periph_glitch_filter.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "periph_glitch_filter_Debug.ld" -o "periph_glitch_filter.axf"  ./example/src/cr_startup_lpc82x.o ./example/src/crp.o ./example/src/glitch_filter.o ./example/src/mtb.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_824 -llpc_chip_82x
+Finished building target: periph_glitch_filter.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_glitch_filter.axf"; # arm-none-eabi-objcopy -v -O binary "periph_glitch_filter.axf" "periph_glitch_filter.bin" ; # checksum -p LPC824 -d "periph_glitch_filter.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9556	      0	    476	  10032	   2730	periph_glitch_filter.axf
+ 
+
+22:59:28 Build Finished (took 1s.927ms)
+

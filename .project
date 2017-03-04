@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ROV_Control_Box</name>
+	<comment></comment>
+	<projects>
+		<project>lpc_board_nxp_lpcxpresso_824</project>
+		<project>lpc_chip_82x</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>

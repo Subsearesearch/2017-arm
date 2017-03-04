@@ -1,0 +1,96 @@
+/*
+===============================================================================
+ Name        : ROV_Control_Box.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : MATE 2017 ROV control box code
+===============================================================================
+*/
+
+
+#include "board.h"
+
+#include <cr_section_macros.h>
+
+#define RED 0
+#define BLUE 2
+#define GREEN 1
+
+#define SCT_PWM            LPC_SCT
+#define SCT_PWM_PIN_OUT    1		/* COUT1 Generate square wave */
+#define SCT_PWM_PIN_LED    0		/* COUT0 [index 2] Controls LED */
+#define SCT_PWM_OUT        1		/* Index of OUT PWM */
+#define SCT_PWM_LED        2		/* Index of LED PWM */
+#define SCT_PWM_RATE      50		/* PWM frequency 50Hz */
+
+/* Systick timer tick rate, to change duty cycle */
+#define TICKRATE_HZ     1000		/* 1 ms Tick rate */
+
+#define LED_STEP_CNT      20		/* Change LED duty cycle every 20ms */
+#define OUT_STEP_CNT    1000		/* Change duty cycle every 1 second */
+
+#define pulseWidth 15
+
+/* Setup board specific pin muxing */
+static void app_setup_pin(void)
+{
+	/* Enable SWM clock before altering SWM */
+	Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_SWM);
+
+#if (defined(BOARD_NXP_LPCXPRESSO_812) || defined(BOARD_LPC812MAX))
+	/* Connect SCT output 0 to LED pin PIO7, SCT output 1 to PIO17 */
+	Chip_SWM_MovablePinAssign(SWM_CTOUT_1_O, 6);
+	Chip_SWM_MovablePinAssign(SWM_CTOUT_0_O, 7);
+#elif defined(BOARD_NXP_LPCXPRESSO_824)
+	/* Connect SCT output 0 to LED pin PIO7, SCT output 1 to PIO17 */
+	Chip_SWM_MovablePinAssign(SWM_SCT_OUT1_O, 12);
+	Chip_SWM_MovablePinAssign(SWM_SCT_OUT0_O, 16);
+#else
+	/* Configure your own SCT pin muxing here if needed */
+#warning "No SCT pin muxing defined"
+#endif
+
+	Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
+}
+
+/**
+ * @brief	Handle interrupt from SysTick timer
+ * @return	Nothing
+ */
+void SysTick_Handler(void)
+{
+	/* This is only used to wakeup up the device from sleep */
+}
+
+int main(void) {
+
+    SystemCoreClockUpdate();
+    Board_Init();
+
+    /* Initialize the SCT as PWM and set frequency */
+    Chip_SCTPWM_Init(SCT_PWM);
+    Chip_SCTPWM_SetRate(SCT_PWM, SCT_PWM_RATE);
+
+	/* Setup Board specific output pin */
+	app_setup_pin();
+
+	/* Use SCT0_OUT1 pin */
+	Chip_SCTPWM_SetOutPin(SCT_PWM, SCT_PWM_OUT, SCT_PWM_PIN_OUT);
+	Chip_SCTPWM_SetOutPin(SCT_PWM, SCT_PWM_LED, SCT_PWM_PIN_LED);
+
+	/* Start with 0% duty cycle */
+	Chip_SCTPWM_SetDutyCycle(SCT_PWM, SCT_PWM_OUT, Chip_SCTPWM_PercentageToTicks(SCT_PWM, (Chip_SCTPWM_GetTicksPerCycle(SCT_PWM) * pulseWidth) / 200));
+	Chip_SCTPWM_SetDutyCycle(SCT_PWM, SCT_PWM_LED, Chip_SCTPWM_PercentageToTicks(SCT_PWM, (Chip_SCTPWM_GetTicksPerCycle(SCT_PWM) * pulseWidth) / 200));
+	Chip_SCTPWM_Start(SCT_PWM);
+
+    //Board_LED_Set(RED, true);
+
+
+
+
+    while(1) {
+
+    }
+    return 0 ;
+}

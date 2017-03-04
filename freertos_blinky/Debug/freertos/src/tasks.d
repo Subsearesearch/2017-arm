@@ -1,0 +1,166 @@
+freertos/src/tasks.o freertos/src/tasks.d: ../freertos/src/tasks.c \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/FreeRTOS.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/projdefs.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\example\inc/FreeRTOSConfig.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc/board.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/chip.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/lpc_types.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/sys_config.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/cmsis.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/core_cm0plus.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/core_cmInstr.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/core_cmFunc.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/romapi_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/iap.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/error_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/rom_i2c_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/rom_pwr_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/rom_uart_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/syscon_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/clock_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/iocon_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/swm_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/fmc_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/pinint_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/pmu_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/acmp_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/crc_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/gpio_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/mrt_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/uart_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/ring_buffer.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/wkt_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/wwdt_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/sct_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/sct_pwm_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spi_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spi_common_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/i2cm_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/i2c_common_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/i2cs_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spim_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spis_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/irc_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/adc_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/dma_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/inmux_8xx.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc/board_api.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/lpc_types.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/portable.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/portmacro.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/mpu_wrappers.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/task.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/list.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/timers.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/task.h \
+ C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/StackMacros.h
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/FreeRTOS.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/projdefs.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\example\inc/FreeRTOSConfig.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc/board.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/chip.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/lpc_types.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/sys_config.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/cmsis.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/core_cm0plus.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/core_cmInstr.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/core_cmFunc.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/romapi_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/iap.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/error_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/rom_i2c_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/rom_pwr_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/rom_uart_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/syscon_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/clock_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/iocon_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/swm_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/fmc_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/pinint_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/pmu_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/acmp_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/crc_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/gpio_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/mrt_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/uart_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/ring_buffer.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/wkt_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/wwdt_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/sct_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/sct_pwm_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spi_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spi_common_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/i2cm_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/i2c_common_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/i2cs_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spim_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/spis_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/irc_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/adc_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/dma_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/inmux_8xx.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc/board_api.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc/lpc_types.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/portable.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/portmacro.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/mpu_wrappers.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/task.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/list.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/timers.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/task.h:
+
+C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\freertos_blinky\freertos\inc/StackMacros.h:

@@ -1,0 +1,41 @@
+23:00:02 **** Build of configuration Debug for project periph_pmu ****
+make -r all 
+Building file: ../example/src/cr_startup_lpc82x.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc82x.d" -MT"example/src/cr_startup_lpc82x.o" -MT"example/src/cr_startup_lpc82x.d" -o "example/src/cr_startup_lpc82x.o" "../example/src/cr_startup_lpc82x.c"
+Finished building: ../example/src/cr_startup_lpc82x.c
+ 
+Building file: ../example/src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/crp.d" -MT"example/src/crp.o" -MT"example/src/crp.d" -o "example/src/crp.o" "../example/src/crp.c"
+Finished building: ../example/src/crp.c
+ 
+Building file: ../example/src/mtb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/mtb.d" -MT"example/src/mtb.o" -MT"example/src/mtb.d" -o "example/src/mtb.o" "../example/src/mtb.c"
+Finished building: ../example/src/mtb.c
+ 
+Building file: ../example/src/power.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/power.d" -MT"example/src/power.o" -MT"example/src/power.d" -o "example/src/power.o" "../example/src/power.c"
+Finished building: ../example/src/power.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__MTB_BUFFER_SIZE=128 -D__REDLIB__ -DCORE_M0PLUS -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\inc" -I"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+Finished building: ../example/src/sysinit.c
+ 
+Building target: periph_pmu.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\Debug" -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\Debug" -Xlinker -Map="periph_pmu.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "periph_pmu_Debug.ld" -o "periph_pmu.axf"  ./example/src/cr_startup_lpc82x.o ./example/src/crp.o ./example/src/mtb.o ./example/src/power.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_824 -llpc_chip_82x
+Finished building target: periph_pmu.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pmu.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pmu.axf" "periph_pmu.bin" ; # checksum -p LPC824 -d "periph_pmu.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8516	      0	    472	   8988	   231c	periph_pmu.axf
+ 
+
+23:00:04 Build Finished (took 1s.917ms)
+

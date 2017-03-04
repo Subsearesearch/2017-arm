@@ -1,0 +1,17 @@
+/*
+ * UART.h
+ *
+ *  Created on: Mar 2, 2017
+ *      Author: Joey
+ */
+
+#ifndef UART_H_
+#define UART_H_
+
+#define LPC_UARTHNDLR   UART0_IRQHandler
+
+static void Init_UART_PinMux(void);
+
+static void sendUART(const char *sendStr);
+
+#endif /* UART_H_ */

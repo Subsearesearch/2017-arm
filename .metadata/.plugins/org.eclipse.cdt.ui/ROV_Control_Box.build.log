@@ -1,0 +1,19 @@
+22:17:20 **** Build of configuration Debug for project ROV_Control_Box ****
+make -r all 
+Building target: ROV_Control_Box.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\Debug" -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\Debug" -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\CMSIS_DSPLIB_CM0\lib" -Xlinker -Map="ROV_Control_Box.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "ROV_Control_Box_Debug.ld" -o "ROV_Control_Box.axf"  ./src/ROV_Control_Box.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_824 -llpc_chip_82x -lCMSIS_DSPLIB_CM0
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       11600 B        32 KB     35.40%
+         RamLoc8:         476 B         8 KB      5.81%
+Finished building target: ROV_Control_Box.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "ROV_Control_Box.axf"; # arm-none-eabi-objcopy -v -O binary "ROV_Control_Box.axf" "ROV_Control_Box.bin" ; # checksum -p LPC824 -d "ROV_Control_Box.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11600	      0	    476	  12076	   2f2c	ROV_Control_Box.axf
+ 
+
+22:17:20 Build Finished (took 659ms)
+

@@ -1,0 +1,16 @@
+23:00:09 **** Build of configuration Debug for project periph_sct_pwm ****
+make -r all 
+Building target: periph_sct_pwm.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\Debug" -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\Debug" -Xlinker -Map="periph_sct_pwm.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "periph_sct_pwm_Debug.ld" -o "periph_sct_pwm.axf"  ./example/src/cr_startup_lpc82x.o ./example/src/crp.o ./example/src/mtb.o ./example/src/sct_pwm.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_824 -llpc_chip_82x
+Finished building target: periph_sct_pwm.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_sct_pwm.axf"; # arm-none-eabi-objcopy -v -O binary "periph_sct_pwm.axf" "periph_sct_pwm.bin" ; # checksum -p LPC824 -d "periph_sct_pwm.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9008	      0	    472	   9480	   2508	periph_sct_pwm.axf
+ 
+
+23:00:09 Build Finished (took 702ms)
+

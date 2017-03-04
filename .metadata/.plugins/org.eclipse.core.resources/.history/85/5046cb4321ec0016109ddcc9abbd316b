@@ -1,0 +1,48 @@
+/*
+===============================================================================
+ Name        : ROV_Control_Box.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : MATE 2017 ROV control box code
+===============================================================================
+*/
+
+
+#include "board.h"
+
+#include <cr_section_macros.h>
+
+#define RED 0
+#define BLUE 2
+#define GREEN 1
+
+#define SCT_PWM            LPC_SCT
+#define SCT_PWM_PIN_OUT    1		/* COUT1 Generate square wave */
+#define SCT_PWM_PIN_LED    0		/* COUT0 [index 2] Controls LED */
+#define SCT_PWM_OUT        1		/* Index of OUT PWM */
+#define SCT_PWM_LED        2		/* Index of LED PWM */
+#define SCT_PWM_RATE   10000		/* PWM frequency 10 KHz */
+
+/* Systick timer tick rate, to change duty cycle */
+#define TICKRATE_HZ     1000		/* 1 ms Tick rate */
+
+#define LED_STEP_CNT      20		/* Change LED duty cycle every 20ms */
+#define OUT_STEP_CNT    1000		/* Change duty cycle every 1 second */
+
+int main(void) {
+
+
+    SystemCoreClockUpdate();
+    Board_Init();
+
+    Board_LED_Set(RED, true);
+
+
+
+
+    while(1) {
+
+    }
+    return 0 ;
+}

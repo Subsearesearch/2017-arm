@@ -1,0 +1,6 @@
+10:50:09 **** Incremental Build of configuration Debug for project ROV_Controller_Prototype ****
+make -r all 
+make: Nothing to be done for `all'.
+
+10:50:09 Build Finished (took 108ms)
+

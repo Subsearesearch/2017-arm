@@ -1,0 +1,16 @@
+23:00:26 **** Build of configuration Debug for project periph_uart_rom_int ****
+make -r all 
+Building target: periph_uart_rom_int.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_chip_82x\Debug" -L"C:\Users\Joey\Documents\LPCXpresso_8.2.2_650\MATE_Workspace\lpc_board_nxp_lpcxpresso_824\Debug" -Xlinker -Map="periph_uart_rom_int.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "periph_uart_rom_int_Debug.ld" -o "periph_uart_rom_int.axf"  ./example/src/cr_startup_lpc82x.o ./example/src/crp.o ./example/src/mtb.o ./example/src/sysinit.o ./example/src/uart_rom_int.o   -llpc_board_nxp_lpcxpresso_824 -llpc_chip_82x
+Finished building target: periph_uart_rom_int.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_uart_rom_int.axf"; # arm-none-eabi-objcopy -v -O binary "periph_uart_rom_int.axf" "periph_uart_rom_int.bin" ; # checksum -p LPC824 -d "periph_uart_rom_int.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8756	      0	    576	   9332	   2474	periph_uart_rom_int.axf
+ 
+
+23:00:27 Build Finished (took 704ms)
+

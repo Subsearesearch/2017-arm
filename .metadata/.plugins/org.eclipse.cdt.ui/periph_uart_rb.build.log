@@ -1,0 +1,6 @@
+21:46:14 **** Incremental Build of configuration Debug for project periph_uart_rb ****
+make -r all 
+make: Nothing to be done for `all'.
+
+21:46:14 Build Finished (took 104ms)
+

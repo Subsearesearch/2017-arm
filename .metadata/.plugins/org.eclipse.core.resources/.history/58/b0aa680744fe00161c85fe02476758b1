@@ -1,0 +1,13 @@
+/*
+ * SCT.h
+ *
+ *  Created on: Feb 28, 2017
+ *      Author: Joey
+ */
+
+#ifndef SCT_H_
+#define SCT_H_
+
+static void app_setup_pin(void);
+
+#endif /* SCT_H_ */
